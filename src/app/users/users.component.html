@@ -1,0 +1,29 @@
+<div *ngIf="loadOk" class="all">
+  <div class="row">
+    <div class="col">
+      <h2 id="bfriends"><img src="../../assets/media/Love_Heart_symbol.svg.png"> Meilleurs Amis</h2>
+      <div class="list-group">
+        <button class="list-group-item btn-friends" *ngFor="let key of usersKeys" (click)="onViewUser(key)">
+          <div class="row datasP" id="infos">
+            <div class="col-6 col-md-6" id="left">
+              <h4 *ngIf="users[key].gates" style="background-color: #19ad5e; " class="gates">Portes Ouvertes</h4>
+              <h4 *ngIf="!users[key].gates" style="background-color: red;" class="gates">Portes Fermees</h4>
+              <h5 *ngIf="users[key].sunday > me.sunday" style="color: red;"> Dimanche : {{ users[key].sunday }} </h5>
+              <h5 *ngIf="me.sunday >= users[key].sunday" style="color: #19ad5e;"> Dimanche : {{ users[key].sunday }} </h5>
+
+              <h5 *ngIf="me.data[match] > users[key].data[match]" style="color: red;">Prix de revente actuel : {{ users[key].data[match] }}</h5>
+              <h5 *ngIf="users[key].data[match] >= me.data[match]" style="color: #19ad5e;">Prix de revente actuel : {{ users[key].data[match] }}</h5>
+            </div>
+            <div class="col-6 col-md-6">
+              <h1 class="list-group-item-heading-pers">
+                {{ users[key].nickName }}
+              </h1>
+              <h5 id="isle"><img src="../../assets/media/island.png">{{ users[key].island }}</h5>
+            </div>
+          </div>            
+            
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div *ngIf="loadOk" class="top">
+  <h1 style="color: grey;">Bienvenue</h1>
+  <div class="form-group">
+    <label>Quel est ton surnom ?</label>
+    <input type="text" id="nickName" class="input-infos ng-pristine ng-valid ng-touched" [(ngModel)]="nickName">
+    <label>Quel est le nom de ton ile ?</label>
+    <input type="text" id="island" class="input-infos ng-pristine ng-valid ng-touched" [(ngModel)]="island" required>
+    <label>Quel sont les fruits de ton ile ?</label>
+    <select id="fruits" class="input-infos ng-pristine ng-valid ng-touched" [(ngModel)]="fruits">
+      <option selected>Fruits...</option>
+      <option>Pommes</option>
+      <option>Cerises</option>
+      <option>Cocos</option>
+      <option>Orange</option>
+      <option>Poires</option>
+      <option>Peches</option>
+    </select>
+    <label>Fille ou Garcon ?</label>
+    <div class="container">
+      <div class="row">
+        <div class="col form-check" style="padding-left: 10%;">
+          <label>
+            <img src="../../assets/media/passeport-photo-f.png">
+            <input class="form-check-input" type="radio"  style="max-width: 150px;"
+            name="gridRadios" id="fille" value="fille" [(ngModel)]="gender" required>
+          </label>
+        </div>
+        <div class="col form-check" style="padding-left: 10%;">
+          <label>
+            <img src="../../assets/media/passeport-photo-g.png">
+            <input class="form-check-input" type="radio"  style="max-width: 150px; padding-left: 10%;"
+            name="gridRadios" id="Garcon" value="garcon" [(ngModel)]="gender" required>
+          </label>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-success pull-right" (click)="onSaveDataBase()">Creer ma base donnees</button>
+  <button class="btn btn-danger pull-right" (click)="onDeco()">Se deconnecter</button>
+  <p *ngIf="allOk">{{ message }} et nous creons ta base de donnee</p>
+  <p *ngIf="!allOk" class="text-danger">{{message}}</p>
+
+</div>

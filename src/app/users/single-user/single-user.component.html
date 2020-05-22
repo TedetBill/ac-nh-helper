@@ -1,0 +1,75 @@
+<div class="page" *ngIf="loadOk"> 
+  <div class="container">
+      <button (click)="onBack()">Retour</button>
+    <h2>Amis : {{ user.nickName }}</h2>
+      <div class="row">
+          <div class="col infos" id="sund">
+              <label class="weekDay">Prix d'achat du dimanche :</label>
+              <input type="text" class="input-price" [disabled]=true value="{{user.sunday}}">
+          </div>
+          <div class="blocks">
+          <div class=" infos">
+              <h6>
+                  <label>Lu Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[0]}}">
+              </h6>
+              <h6>
+                  <label>Lu Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[1]}}">
+              </h6>
+          </div>
+          <div class=" infos">
+              <h6>
+                  <label>Ma Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[2]}}">
+                              </h6>
+              <h6>
+                  <label>Ma Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[3]}}">
+                              </h6>
+          </div>
+          <div class=" infos">
+              <h6>
+                  <label>Me Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[4]}}">
+                              </h6>
+              <h6>
+                  <label>Me Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[5]}}">
+                              </h6>
+          </div>
+          <div class=" infos">
+              <h6>
+                  <label>Je Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[6]}}">
+                             </h6>
+              <h6>
+                  <label>Je Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[7]}}">
+                              </h6>
+          </div>
+          <div class=" infos">
+              <h6>
+                  <label>Ve Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[8]}}">
+                             </h6>
+              <h6>
+                  <label>Ve Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[9]}}">
+              </h6>
+          </div>
+          <div class=" infos">
+              <h6>
+                  <label>Sa Matin</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[10]}}">
+              </h6>
+              <h6>
+                  <label>Sa Aprem</label>
+                  <input type="text" class="input-price" [disabled]=true value="{{datas[11]}}">
+               </h6>
+          </div>
+          </div>
+      </div>
+  </div>
+  <app-graph [user]="user"></app-graph>
+</div>

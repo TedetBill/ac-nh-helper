@@ -1,0 +1,145 @@
+
+.all{
+   /*  background-image: linear-gradient(to right,rgb(126,33,192), rgb(244,162,113)); */
+   background-image: url(../../assets/original/leaf.png);
+}
+#base{
+    width: 80%;
+    margin-left: 10%;
+}
+.passeport{
+    background-color: rgb(252,250,225);
+    padding-bottom: 66px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    height: 534px;;
+}
+.passeport-title{
+    text-align: center;
+}
+#bluepart{
+    background-color: rgb(220,232,208);
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 400px;
+}
+.datasP{
+    border-bottom: 1px solid white;
+    display: flex;
+}
+.nickname{
+    background-color: transparent;
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 16px 2px 7px;
+    min-width: 0;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-tap-highlight-color: transparent;
+    border-bottom: 1px solid grey;
+    font-size: x-large;
+    padding-left: 20px;
+}
+#nicknameInput{
+    padding-top: 7px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    padding-top: 40px;
+    padding-bottom: 34px;
+    margin: -24px;
+    width: 100%;
+    
+}
+.weekDay{
+    color: grey;
+    font-size: 18px;
+}
+.name{
+    padding-top: 14px;}
+#photo{
+    margin-top: 7%;
+}
+#profil-pic{
+    border-radius: 35px;
+}
+#infos{
+    margin-top: 7%;
+}
+.btn-ok{
+    background-color: beige;
+    border: black 1px solid;
+    border-radius: 12px;
+    margin-top: 7px;
+}
+#danger{
+    background-color: red;
+}
+
+@media (max-width: 870px){
+
+    #photo{
+        margin-top: 6px;
+        padding-left: 33%;
+    }
+    .col-md-4 {
+        -webkit-box-flex: 0;
+        flex: 0 0 33.333333%;
+        max-width: 34.333333%;
+}
+    .passeport{
+        height: 720px;
+    }
+    #bluepart{
+        height: 590px;
+    }
+    .nickname{
+        padding-left: 0px;
+        width: 240px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    #ppt{
+        font-size: 28px;
+        }
+}
+
+@media (max-width: 490px){
+    #photo{
+        margin-top: 0px;
+        padding-left: 0%;
+       height: 0px;
+    }
+    #profil-pic{
+        width: 140px;
+    }
+    .passeport{
+        height: 900px;
+    }
+    #bluepart{
+        height: 690px;
+    }
+    h3{
+        font-size: 21px;
+    }
+    .weekDay{
+        width: 130px;
+    }
+    #ppt{
+        font-size: 17px;
+        }
+    .datasP{
+        margin-bottom: 13px;
+        }
+
+   
+}

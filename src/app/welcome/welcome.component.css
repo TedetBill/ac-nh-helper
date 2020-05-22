@@ -1,0 +1,35 @@
+label{
+    color: darkgoldenrod;
+    font-size: 20px;
+}
+.input-infos{
+    background-color: transparent;
+        font: inherit;
+        color: currentColor;
+        width: 22%;
+        border: 0;
+        border-radius: 0%;
+        height: 1.1876em;
+        margin: 0;
+        display: block;
+        padding: 6px 20px 7px;
+        min-width: 0;
+        box-sizing: content-box;
+        animation-name: mui-auto-fill-cancel;
+        -webkit-tap-highlight-color: transparent;
+        border-bottom: 1px solid grey;
+}
+.input-infos:focus{
+    outline: none;
+    border-bottom: 2px solid grey;
+}
+.top{
+
+    background-color: aliceblue;
+    padding: 30px;
+    margin: 0px 12% 0px;
+    border-radius: 70px;
+}
+.form-control {
+    width: 45%;
+}

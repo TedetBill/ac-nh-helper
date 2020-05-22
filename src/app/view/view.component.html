@@ -1,0 +1,78 @@
+<div class="page" *ngIf="loadOk"> 
+    <div class="container">
+        <div class="row">
+            <div class="col infos" id="sund">
+                <label class="weekDay">Prix d'achat du dimanche :</label>
+                <input type="number" class="input-price" [(ngModel)]="me.sunday" ng-pattern="/^[0-9]/" (keydown.enter)="onSaveData()">
+            </div>
+            <div class="blocks">
+            <div class=" infos">
+                <h6>
+                    <label>Lu Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[0]" ng-pattern="/^[0-9]/">
+                </h6>
+                <h6>
+                    <label>Lu Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[1]" ng-pattern="/^[0-9]/" [disabled]="me.data[0] == 0">
+                </h6>
+            </div>
+            <div class=" infos">
+                <h6>
+                    <label>Ma Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[2]" ng-pattern="/^[0-9]/" [disabled]="me.data[1] == 0">
+                                </h6>
+                <h6>
+                    <label>Ma Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[3]" ng-pattern="/^[0-9]/" [disabled]="me.data[2] == 0">
+                                </h6>
+            </div>
+            <div class=" infos">
+                <h6>
+                    <label>Me Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[4]" ng-pattern="/^[0-9]/" [disabled]="me.data[3] == 0">
+                                </h6>
+                <h6>
+                    <label>Me Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[5]" ng-pattern="/^[0-9]/" [disabled]="me.data[4] == 0">
+                                </h6>
+            </div>
+            <div class=" infos">
+                <h6>
+                    <label>Je Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[6]" ng-pattern="/^[0-9]/" [disabled]="me.data[5] == 0"> 
+                               </h6>
+                <h6>
+                    <label>Je Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[7]" ng-pattern="/^[0-9]/" [disabled]="me.data[6] == 0">
+                                </h6>
+            </div>
+            <div class=" infos">
+                <h6>
+                    <label>Ve Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[8]" ng-pattern="/^[0-9]/" [disabled]="me.data[7] == 0"> 
+                               </h6>
+                <h6>
+                    <label>Ve Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[9]" ng-pattern="/^[0-9]/" [disabled]="me.data[8] == 0">                </h6>
+            </div>
+            <div class=" infos">
+                <h6>
+                    <label>Sa Matin</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[10]" ng-pattern="/^[0-9]/" [disabled]="me.data[9] == 0"> 
+                            </h6>
+                <h6>
+                    <label>Sa Aprem</label>
+                    <input type="number" class="input-price" (keydown.enter)="onSaveData()" [(ngModel)]="me.data[11]" ng-pattern="/^[0-9]/" [disabled]="me.data[10] == 0">
+                                </h6>
+            </div>
+            </div>
+        </div>
+        <button class="btn-ok pull-right" (click)="onSaveData()" [disabled]="isLoading">Enregistrer</button>
+        <!-- <p *ngIf="wrongPattern" class="text-danger">Oups les donnees ne sont pas sauvegarder car elles sont incorrect</p>
+        <p *ngIf="dataSaved" class="text-succes">Les datas sont sauvees</p> -->
+    </div>
+   
+
+   
+    <app-graph-user></app-graph-user>
+</div>

@@ -1,0 +1,57 @@
+<div class="all">
+<div *ngIf="loadOk" id="base">
+    <div class="passeport">
+        <div class="passeport-title">
+            <h1 id="ppt">-------- PASSEPORT --------</h1>
+        </div>
+        <div class="row" id="bluepart">
+            <div class="col-6 col-md-4" id="photo">
+                <img *ngIf="me.gender == 'garcon'" id="profil-pic" src="../../assets/media/passeport-photo-g.png">
+                <img *ngIf="me.gender == 'fille'" id="profil-pic" src="../../assets/media/passeport-photo-f.png">
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row datasP" id="infos">
+                        <div class="col-6 col-md-6">
+                            <h3> <img src="../../assets/media/island.png"> {{ me.island }}</h3>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <h3> <img src="../../assets/media/island.png"> {{ me.fruits }}</h3>
+                        </div>
+                </div>
+                <div class="row datasP">
+                    <div class="col-6 col-md-6" >
+                        <div class="list-group-item">
+                            <label class="weekDay">Identifiant :</label>
+                            <h4 class="name">{{ uid }}</h4>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="row datasP">
+                    <div class="col-6 col-md-6">
+                        <div class="list-group-item">
+                            <label class="weekDay">Surnom :</label>
+                            <input type="text" class="nickname" (keydown.enter)="onChangeNickName()" [(ngModel)]="me.nickName">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row datasP">
+                    <h4 *ngIf="me.gates" style="color: #19ad5e;">Portes Ouvertes</h4>
+                    <h4 *ngIf="!me.gates" style="color: red;">Portes Fermees</h4>
+                </div>
+                </div>
+            </div>
+           
+        </div>
+        <button class="btn-ok pull-right" (click)="onChangeNickName()">Changer Mon Surnom</button>
+       
+        
+        <button class="btn-ok pull-right" *ngIf="!me.gates" (click)="onOpenGates()">Ouvrir mes portes</button>
+        <button class="btn-ok pull-right" *ngIf="me.gates" (click)="onCloseGates()">Fermer mes portes</button>
+</div> 
+
+<button class="btn-ok pull-right" id="danger" (click)="onDeleteAccount()">Supprimer Mon Compte</button>
+
+<button class="btn-ok pull-right" id="danger" (click)="onSunday()">Reset mes données</button>
+</div>
